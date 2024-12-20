@@ -68,7 +68,7 @@ if __name__ == "__main__":
             """Train the model locally."""
             self.set_parameters(parameters)
             print(f"Client {self.client_id}: Starting local training...")
-            train_model(self.model, self.train_loader, epochs=5)
+            train_model(self.model, self.train_loader, epochs=20)
             return self.get_parameters(config), len(self.train_loader.dataset), {}
 
         def evaluate(self, parameters, config):
@@ -114,20 +114,19 @@ if __name__ == "__main__":
             avg_train_loss = train_loss / train_total_samples
             train_acc = train_total_correct / train_total_samples
 
-            # Client ID from config or assign a static one if not provided
-            client_id = config.get("cid", client_id)  # Replace with unique ID logic if needed
-
+            # Use self.client_id for Client ID
             print(f"Test Loss: {avg_loss:.4f}, Test Accuracy: {test_acc:.4f}")
             print(f"Train Loss: {avg_train_loss:.4f}, Train Accuracy: {train_acc:.4f}")
-            print(f"Client ID: {client_id}")
+            print(f"Client ID: {self.client_id}")
 
             # Return evaluation metrics
             return float(avg_loss), len(self.test_loader.dataset), {
                 "test_acc": test_acc,
                 "train_loss": avg_train_loss,
                 "train_acc": train_acc,
-                "cid": client_id
+                "cid": self.client_id  # Return self.client_id
             }
+
 
 
     # Start Flower client

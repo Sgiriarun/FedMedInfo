@@ -12,7 +12,8 @@ from flwr.common import EvaluateRes, Scalar
 # Add the parent directory to the Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from Models.model import GenericModel
-
+import time
+import csv
 # Global variables for tracking metrics
 FLloss_list = []
 FLacc_list = []
@@ -31,6 +32,17 @@ class CustomStrategy(FedAvg):
         self.save_path.mkdir(parents=True, exist_ok=True)
         self.best_acc = 0.0
         self.best_rnd = 0
+
+    def save_metrics_to_csv(self, round_num, fl_loss, fl_acc, train_losses, train_accuracies, cid_list):
+        """Save metrics to a CSV file."""
+        with open("metrics.csv", "a", newline="") as file:
+            writer = csv.writer(file)
+            # Write header if the file is empty
+            if file.tell() == 0:
+                writer.writerow(["Round", "FL_Loss", "FL_Accuracy", "Client_ID", "Train_Loss", "Train_Accuracy"])
+            # Write data for each client
+            for cid, train_loss, train_acc in zip(cid_list, train_losses, train_accuracies):
+                writer.writerow([round_num, fl_loss, fl_acc, cid, train_loss, train_acc])
 
     def aggregate_fit(self, rnd, results, failures):
         """Aggregate model parameters and save the checkpoint."""
@@ -88,11 +100,17 @@ class CustomStrategy(FedAvg):
         if rnd == Total_rnds:
             print(f"Best FL accuracy: {self.best_acc:.4f} on round {self.best_rnd}")
 
+        # Save metrics to CSV
+        self.save_metrics_to_csv(rnd, test_loss[0], test_acc[0], train_loss, train_acc, cid_list)
+
         # Call the base class method to finalize aggregation
         return super().aggregate_evaluate(rnd, results, failures)
 
 
+
 if __name__ == "__main__":
+    start_time = time.time()
+
     input_size = 5
     model = GenericModel(input_size=input_size)
 
@@ -116,3 +134,9 @@ if __name__ == "__main__":
         config=config,
         strategy=strategy
     )
+
+    # Log convergence time
+    end_time = time.time()
+    print(f"Convergence time: {end_time - start_time:.2f} seconds")
+    # with open("metrics.csv", "a") as file:
+    #     file.write(f"\nConvergence Time,{end_time - start_time:.2f} seconds")
