@@ -1,2 +1,10 @@
+# Virtual environment
+.venv/
+
+# Byte-compiled files
 *.pyc
-inference_results_subject_30.csv
+__pycache__/
+
+# Logs and results
+*.log
+*.csv
