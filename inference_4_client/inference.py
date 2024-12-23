@@ -1,11 +1,10 @@
 import os
-<<<<<<< HEAD
+
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import csv
-=======
->>>>>>> 647ff19da6902c0f6249192bfbe7fb2026e13c3b
+
 import torch
 import numpy as np
 from Models.model import GenericModel, load_subject_data
