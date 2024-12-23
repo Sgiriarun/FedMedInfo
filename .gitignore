@@ -8,3 +8,6 @@ __pycache__/
 # Logs and results
 *.log
 *.csv
+CASE_full/
+processed_features/
+global_models/
