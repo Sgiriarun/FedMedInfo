@@ -1,0 +1,510 @@
+
+----------------------------->>>>subject_independent<<<<------------------
+(.venv_fedemo) (base) bmi-lab@bmilab-System-Product-Name:~/Documents/fed_emo$ python client.py --mode subject_independent --subject_ids 1 2 3
+Loading data for subject-independent training (Subject IDs: [1, 2, 3])...
+Starting Flower client with mode 'subject_independent'...
+WARNING :   DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+        Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+        flwr.client.start_client(
+                server_address='<IP>:<PORT>',
+                client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+        )
+        Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+WARNING :   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+        Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+                $ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+        To view all available options, run:
+
+                $ flower-supernode --help
+
+        Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+INFO :      
+INFO :      Received: evaluate message 78361ec8-ef52-4f3e-b56d-9d9f93627b94
+Test Loss: 1.8208
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 6aadf5f5-eddf-4b2a-9888-452526b41ec3
+Client: Starting local training...
+Epoch 1/5, Loss: 1.5560
+Epoch 2/5, Loss: 1.4878
+Epoch 3/5, Loss: 1.4615
+Epoch 4/5, Loss: 1.4412
+Epoch 5/5, Loss: 1.4274
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 2c950c11-6da0-425f-9476-d1502e7d844f
+Test Loss: 1.6082
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 91ee4dbd-9f3a-40a1-8d6f-10b41d8db757
+Client: Starting local training...
+Epoch 1/5, Loss: 1.4524
+Epoch 2/5, Loss: 1.4213
+Epoch 3/5, Loss: 1.4092
+Epoch 4/5, Loss: 1.3988
+Epoch 5/5, Loss: 1.3888
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 6f70a341-046b-4841-b7fd-7fe6edebc930
+Test Loss: 1.5195
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 3a3eaf32-7d5a-45c3-9df8-66e92be8f7ab
+Client: Starting local training...
+Epoch 1/5, Loss: 1.4061
+Epoch 2/5, Loss: 1.3873
+Epoch 3/5, Loss: 1.3768
+Epoch 4/5, Loss: 1.3680
+Epoch 5/5, Loss: 1.3619
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 4082ad0c-8942-47ec-b028-fcca70a7f4ab
+Test Loss: 1.5425
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 3b84d897-cd85-448b-a8d7-05ff064a7692
+Client: Starting local training...
+Epoch 1/5, Loss: 1.3771
+Epoch 2/5, Loss: 1.3627
+Epoch 3/5, Loss: 1.3549
+Epoch 4/5, Loss: 1.3498
+Epoch 5/5, Loss: 1.3468
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 8e2d2c68-09d9-4136-86b6-a46857c8b916
+Test Loss: 1.5627
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message d678f3e9-8d43-4bd4-bb55-7b6f9daac90f
+Client: Starting local training...
+Epoch 1/5, Loss: 1.3600
+Epoch 2/5, Loss: 1.3495
+Epoch 3/5, Loss: 1.3445
+Epoch 4/5, Loss: 1.3388
+Epoch 5/5, Loss: 1.3348
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 49482227-dbd4-493f-b615-9a44c745f3a9
+Test Loss: 1.5863
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message bba4813d-be9a-4a36-b75b-ec67347bdcb5
+Client: Starting local training...
+Epoch 1/5, Loss: 1.3460
+Epoch 2/5, Loss: 1.3362
+Epoch 3/5, Loss: 1.3315
+Epoch 4/5, Loss: 1.3279
+Epoch 5/5, Loss: 1.3231
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 4a7d3a0b-7b25-4dca-b82c-109a81c083cb
+Test Loss: 1.5571
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 842705b2-a127-44d0-a23e-a99645b9f781
+Client: Starting local training...
+Epoch 1/5, Loss: 1.3352
+Epoch 2/5, Loss: 1.3255
+Epoch 3/5, Loss: 1.3178
+Epoch 4/5, Loss: 1.3169
+Epoch 5/5, Loss: 1.3136
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 0c0ec059-4c3e-41ed-ba1b-4aff6f2d957c
+Test Loss: 1.5659
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 122fba97-717e-4b71-ac5f-aa284b2300c9
+Client: Starting local training...
+Epoch 1/5, Loss: 1.3237
+Epoch 2/5, Loss: 1.3139
+Epoch 3/5, Loss: 1.3099
+Epoch 4/5, Loss: 1.3065
+Epoch 5/5, Loss: 1.3020
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 62b2b9c1-4a2a-437e-a859-5acdf8955e57
+Test Loss: 1.5266
+INFO :      Sent reply
+INFO :      
+INFO :      Received: reconnect message 1bd25541-7bdf-437b-99fb-dfa1f7e7184e
+INFO :      Disconnect and shut down
+
+-------client2--------->>>>subject_dependent<<<<<<-----------
+
+Name:~/Documents/fed_emo$ python client.py --mode subject_dependent --subject_ids 2
+Loading data for subject-dependent training (Subject ID: 2)...
+Starting Flower client with mode 'subject_dependent'...
+WARNING :   DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+        Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+        flwr.client.start_client(
+                server_address='<IP>:<PORT>',
+                client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+        )
+        Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+WARNING :   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+        Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+                $ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+        To view all available options, run:
+
+                $ flower-supernode --help
+
+        Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+INFO :      
+INFO :      Received: train message e6b79513-5875-4e8a-8a7c-59078f1fcde1
+Client: Starting local training...
+Epoch 1/5, Loss: 1.3473
+Epoch 2/5, Loss: 0.5113
+Epoch 3/5, Loss: 0.4776
+Epoch 4/5, Loss: 0.4557
+Epoch 5/5, Loss: 0.4396
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 92e31707-cbd1-4c39-a787-7b9eb37c273d
+Test Loss: 1.1504
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 8d4067f8-61d7-4ee3-ac98-80d6ba2ea023
+Client: Starting local training...
+Epoch 1/5, Loss: 0.4860
+Epoch 2/5, Loss: 0.4355
+Epoch 3/5, Loss: 0.4164
+Epoch 4/5, Loss: 0.4034
+Epoch 5/5, Loss: 0.3932
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message bfcd09f7-7270-444d-bd7a-20ad3c585b7d
+Test Loss: 1.1382
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message f43af853-035c-4176-a098-e3f969492f49
+Client: Starting local training...
+Epoch 1/5, Loss: 0.4401
+Epoch 2/5, Loss: 0.3953
+Epoch 3/5, Loss: 0.3852
+Epoch 4/5, Loss: 0.3779
+Epoch 5/5, Loss: 0.3722
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message ba271df5-0aa6-401f-a2d3-4ef455868846
+Test Loss: 0.7715
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message dd3e62f5-c135-4296-8ba3-5ee043389908
+Client: Starting local training...
+Epoch 1/5, Loss: 0.4255
+Epoch 2/5, Loss: 0.3880
+Epoch 3/5, Loss: 0.3765
+Epoch 4/5, Loss: 0.3670
+Epoch 5/5, Loss: 0.3619
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message d6af15c0-edf4-4696-9954-a8f59bb525a2
+Test Loss: 0.6650
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 66af64e1-2d08-4041-a56a-307de7083ecd
+Client: Starting local training...
+Epoch 1/5, Loss: 0.4102
+Epoch 2/5, Loss: 0.3765
+Epoch 3/5, Loss: 0.3637
+Epoch 4/5, Loss: 0.3562
+Epoch 5/5, Loss: 0.3503
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message e28003aa-eca5-45d7-9ace-4b97af99dff9
+Test Loss: 0.5740
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 639de09f-3473-479f-993d-743b7906d044
+Client: Starting local training...
+Epoch 1/5, Loss: 0.3999
+Epoch 2/5, Loss: 0.3670
+Epoch 3/5, Loss: 0.3560
+Epoch 4/5, Loss: 0.3514
+Epoch 5/5, Loss: 0.3461
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 6b849d0d-e35d-4a4d-8ddb-d292b8e2c46c
+Test Loss: 0.5869
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 67209378-6175-46b2-a76e-12f10fef4b2b
+Client: Starting local training...
+Epoch 1/5, Loss: 0.3985
+Epoch 2/5, Loss: 0.3631
+Epoch 3/5, Loss: 0.3540
+Epoch 4/5, Loss: 0.3449
+Epoch 5/5, Loss: 0.3434
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message faa9e79d-451c-44f7-ab9f-a24f5ce3c297
+Test Loss: 0.5669
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 88768925-cf1b-4338-9311-ed80db3c874f
+Client: Starting local training...
+Epoch 1/5, Loss: 0.3911
+Epoch 2/5, Loss: 0.3606
+Epoch 3/5, Loss: 0.3493
+Epoch 4/5, Loss: 0.3440
+Epoch 5/5, Loss: 0.3386
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message c202a6b9-478c-4a0d-ae52-6d1d256063af
+Test Loss: 0.5865
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message 5477fca5-2deb-49fa-befe-bd1beb255f57
+Client: Starting local training...
+Epoch 1/5, Loss: 0.3873
+Epoch 2/5, Loss: 0.3558
+Epoch 3/5, Loss: 0.3458
+Epoch 4/5, Loss: 0.3413
+Epoch 5/5, Loss: 0.3371
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message b1497f6f-9124-4fae-a8b0-aa4eb05a97e0
+Test Loss: 0.5525
+INFO :      Sent reply
+INFO :      
+INFO :      Received: train message b7f81d39-700c-43da-8a9e-d84c1253bdf1
+Client: Starting local training...
+Epoch 1/5, Loss: 0.3853
+Epoch 2/5, Loss: 0.3545
+Epoch 3/5, Loss: 0.3455
+Epoch 4/5, Loss: 0.3377
+Epoch 5/5, Loss: 0.3340
+INFO :      Sent reply
+INFO :      
+INFO :      Received: evaluate message 3739963f-1095-4f0e-b809-8d02dd2ffae5
+Test Loss: 0.5576
+INFO :      Sent reply
+INFO :      
+INFO :      Received: reconnect message 5ab28fc2-9576-4c39-bbbe-a3243f92f889
+INFO :      Disconnect and shut down
+---------server------
+.venv_fedemo) (base) bmi-lab@bmilab-System-Product-Name:~/Documents/fed_emo$ python server/server.py 
+WARNING :   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+        Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+                $ flower-superlink --insecure
+
+        To view usage and all available options, run:
+
+                $ flower-superlink --help
+
+        Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+INFO :      Starting Flower server, config: num_rounds=10, no round_timeout
+INFO :      Flower ECE: gRPC server running (10 rounds), SSL is disabled
+INFO :      [INIT]
+INFO :      Requesting initial parameters from one random client
+INFO :      Received initial parameters from one random client
+INFO :      Starting evaluation of initial global parameters
+INFO :      Evaluation returned no results (`None`)
+INFO :      
+INFO :      [ROUND 1]
+INFO :      configure_fit: strategy sampled 2 clients (out of 2)
+INFO :      aggregate_fit: received 2 results and 0 failures
+WARNING :   No fit_metrics_aggregation_fn provided
+INFO :      configure_evaluate: strategy sampled 3 clients (out of 3)
+INFO :      aggregate_evaluate: received 3 results and 0 failures
+WARNING :   No evaluate_metrics_aggregation_fn provided
+INFO :      
+INFO :      [ROUND 2]
+INFO :      configure_fit: strategy sampled 3 clients (out of 3)
+INFO :      aggregate_fit: received 3 results and 0 failures
+Saving global model for round 2...
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [ROUND 3]
+INFO :      configure_fit: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_fit: received 4 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [ROUND 4]
+INFO :      configure_fit: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_fit: received 4 results and 0 failures
+Saving global model for round 4...
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [ROUND 5]
+INFO :      configure_fit: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_fit: received 4 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [ROUND 6]
+INFO :      configure_fit: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_fit: received 4 results and 0 failures
+Saving global model for round 6...
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [ROUND 7]
+INFO :      configure_fit: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_fit: received 4 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [ROUND 8]
+INFO :      configure_fit: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_fit: received 4 results and 0 failures
+Saving global model for round 8...
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [ROUND 9]
+INFO :      configure_fit: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_fit: received 4 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [ROUND 10]
+INFO :      configure_fit: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_fit: received 4 results and 0 failures
+Saving global model for round 10...
+INFO :      configure_evaluate: strategy sampled 4 clients (out of 4)
+INFO :      aggregate_evaluate: received 4 results and 0 failures
+INFO :      
+INFO :      [SUMMARY]
+INFO :      Run finished 10 round(s) in 7525.66s
+INFO :          History (loss, distributed):
+INFO :                  round 1: 1.9143284161885579
+INFO :                  round 2: 1.8204118410746257
+INFO :                  round 3: 1.607909659544627
+INFO :                  round 4: 1.5192499657471974
+INFO :                  round 5: 1.542245884736379
+INFO :                  round 6: 1.5624572237332661
+INFO :                  round 7: 1.5860380331675212
+INFO :                  round 8: 1.5568511585394542
+INFO :                  round 9: 1.5656671226024628
+INFO :                  round 10: 1.526311496893565
+INFO :      
+(.venv_fedemo) (base) bmi-lab@bmilab-System-Product-Name:~/Documents/fed_emo$ 
+
+What config Typically Contains
+
+    Federated Learning Hyperparameters:
+        local_epochs: Number of epochs to train on local data.
+        batch_size: Batch size for local training.
+        learning_rate: Learning rate for the optimizer.
+
+    Client-Specific Parameters:
+        client_id: Identifier for the client.
+        data_partition: Metadata about the client's data split.
+
+    Server-Controlled Parameters:
+        round: Current round number in federated learning.
+        target_accuracy: A goal for accuracy that clients may try to achieve.
+        
+        
+Non-IID (Non-Independent and Identically Distributed) data arises when data across clients (or devices) is not sampled from the same underlying distribution or when there is variation in the data characteristics between clients. In Federated Learning (FL), this is a common challenge because data is collected and stored locally on different devices or institutions, leading to inherent diversity. Below is a detailed explanation of why non-IID data occurs in FL contexts:
+1. Differences in Data Sources
+
+    Client-Specific Contexts:
+        Each client may collect data under different environmental or contextual conditions.
+        Example: In a wearable device setting for health monitoring, data from athletes (active) and office workers (sedentary) will naturally differ.
+    Device-Specific Factors:
+        Variability in sensors or hardware between devices can introduce differences in the collected data.
+        Example: ECG signals from older devices may have lower resolution than those from newer ones.
+
+2. Demographic and Behavioral Variability
+
+    Population Differences:
+        Clients represent diverse populations with varying demographics, behaviors, and preferences.
+        Example: In a language modeling task, the vocabulary or linguistic style differs between regions, cultures, or age groups.
+    User Preferences:
+        Behavioral data like browsing habits or app usage patterns vary significantly between users.
+        Example: Smartphone users from different countries may use applications in entirely different ways.
+
+3. Imbalanced Data Distribution
+
+    Skewed Label Distribution:
+        Clients may have access to data with specific labels but lack others, creating imbalanced datasets.
+        Example: In a medical imaging scenario, one hospital might have more pneumonia cases while another has more cancer cases.
+    Quantity Imbalance:
+        The amount of data collected by each client can vary significantly.
+        Example: A popular app might collect vast amounts of data from urban users but limited data from rural users.
+
+4. Temporal Variations
+
+    Dynamic Data Characteristics:
+        Data collected at different times may vary due to changes in context, behavior, or environment.
+        Example: EDA (Electrodermal Activity) data collected during summer (when people sweat more) will differ from winter data.
+    Seasonal Trends:
+        Data patterns can exhibit seasonality or trends over time.
+        Example: Shopping behaviors differ during holiday seasons versus regular months.
+
+5. Heterogeneity in Tasks
+
+    Varied Learning Objectives:
+        Clients might have slightly different goals or tasks despite being part of the same FL system.
+        Example: In a handwriting recognition FL system, some clients might focus on digits (e.g., 0-9), while others focus on alphabets (e.g., A-Z).
+
+6. Sensor and Measurement Differences
+
+    Calibration Variability:
+        Sensors may have different calibration or precision levels across devices.
+        Example: Heart rate measurements from different fitness trackers may vary in accuracy.
+    Data Noise:
+        Devices might introduce noise due to environmental interference or hardware limitations.
+
+7. Privacy Constraints
+
+    Selective Data Access:
+        Privacy policies might restrict data collection for specific features or labels.
+        Example: A healthcare dataset may anonymize certain features, leading to incomplete or biased information on some clients.
+
+8. Data Augmentation or Preprocessing
+
+    Local Data Transformations:
+        Each client may preprocess or augment data differently, introducing additional variation.
+        Example: One client might normalize data, while another might apply a different scaling method.
+
+Implications of Non-IID Data in FL
+
+    Poor Generalization of the Global Model:
+        The aggregated global model may not perform well for clients with data that deviates significantly from the overall average.
+    Convergence Issues:
+        Training a single global model on non-IID data may lead to slower convergence or instability.
+    Client Inequality:
+        Some clients may receive a model that is not well-suited to their local data, causing dissatisfaction or suboptimal performance.
+
+Solutions for Non-IID Challenges
+
+    Personalized FL:
+        Tailoring models for each client while leveraging shared knowledge.
+    Domain Adaptation:
+        Aligning distributions across clients to reduce discrepancies.
+    Clustered FL:
+        Grouping clients with similar data distributions and training specialized models for each group.
+    Federated Averaging with Weights:
+        Giving more weight to clients whose data is more representative of the overall distribution.

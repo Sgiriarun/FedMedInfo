@@ -46,7 +46,7 @@ def load_multiple_subjects_data(subject_ids, data_directory="processed_features"
 
 
 # Train Model
-def train_model(model, train_loader, epochs=5, learning_rate=0.001):
+def train_model(model, train_loader, epochs=10, learning_rate=0.001):
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
